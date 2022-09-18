@@ -1,0 +1,19 @@
+spring:
+  data:
+    mongodb:
+      host: 103.171.85.198
+      database: chat_service
+      port: 27017
+  redis:
+    host: ${REDIS_HOST:localhost}
+    port: ${REDIS_PORT:6379}
+    password: ${REDIS_PWD:}
+    timeout: ${REDIS_TIMEOUT:100000000}
+logging:
+    level:
+     chatservice: DEBUG
+
+redis:
+  chatservice:
+        key:
+          sessionws: ${REDIS_SESSION_WS:sessionws}
